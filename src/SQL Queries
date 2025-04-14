@@ -1,0 +1,31 @@
+CREATE DATABASE hotel_management;
+USE hotel_management;
+
+-- Rooms Table --
+CREATE TABLE rooms (
+    room_no INT PRIMARY KEY,
+    room_type VARCHAR(50),
+    price_per_day DECIMAL(10,2),
+    is_available BOOLEAN DEFAULT TRUE
+);
+
+-- Customers Table --
+CREATE TABLE customers (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    phone VARCHAR(15),
+    room_no INT,
+    check_in DATETIME,
+    check_out DATETIME,
+    days_stayed INT,
+    total_bill DECIMAL(10,2),
+    FOREIGN KEY (room_no) REFERENCES rooms(room_no)
+);
+
+-- Sample Room Data --
+INSERT INTO rooms VALUES
+(101, 'Single', 1000.00, TRUE),
+(102, 'Single', 1000.00, TRUE),
+(201, 'Double', 1800.00, TRUE),
+(202, 'Double', 1800.00, TRUE),
+(301, 'Suite', 3000.00, TRUE);
