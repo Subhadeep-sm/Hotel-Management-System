@@ -57,5 +57,5 @@ A **console-based Hotel Management System** built using **Java** with **MySQL da
 1. **Clone the Repository**
 
 ```bash
-git clone https://github.com/your-username/hotel-management-system.git
-cd hotel-management-system
+git clone https://github.com/Subhadeep-sm/Hotel-Management-System.git
+cd Hotel-Management-System
